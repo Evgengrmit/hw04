@@ -9,4 +9,5 @@ add_library(formatter_ex STATIC formatter_ex.cpp)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/formatter_ex_lib ${CMAKE_CURRENT_SOURCE_DIR}/formatter_lib)
 
-target_link_libraries(formatter_ex formatter)
+find_library(formatter NAMES libformatter.a PATHS ${CMAKE_CURRENT_SOURCE_DIR}/formatter_lib/_build)
+target_link_libraries(formatter_ex ${formatter})
