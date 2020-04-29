@@ -23,4 +23,4 @@ for:
         - job_name: each CMakeLists.txt
 
     build_script:
-    - cmd: source ./script
+    - cmd: source script
