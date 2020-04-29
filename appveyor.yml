@@ -1,4 +1,5 @@
 image: Visual Studio 2019
+
 environment:
   matrix:
 
@@ -6,7 +7,7 @@ environment:
 
   - job_name: each CMakeLists.txt
 
-  for:
+for:
 
   -
     matrix:
@@ -16,7 +17,7 @@ environment:
     build_script:
     - cmd: cmake -H. -B_build
     - cmd: cmake --build _build
- -
+  -
     matrix:
       only:
         - job_name: each CMakeLists.txt
