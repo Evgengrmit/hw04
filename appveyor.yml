@@ -1,19 +1,5 @@
 image: Visual Studio 2019
 
-environment:
-  matrix:
-
-  - job_name: all projects
-
-  - job_name: each CMakeLists.txt
-
-for:
-
-  -
-    matrix:
-      only:
-        - job_name: all projects
-
     build_script:
     - cmd: cmake -H. -B_build
     - cmd: cmake --build _build
